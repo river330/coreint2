@@ -27,7 +27,7 @@ function typeWriter() {
     document.getElementById("type").innerHTML += line.charAt(i);
     i++;
     setTimeout(typeWriter, speed);
-    document.getElementById("type").style.color="#D4E141";
+    document.getElementById("type").style.color="#E3F32A";
     
   }
   // getName();
