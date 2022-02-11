@@ -1,3 +1,8 @@
+html {
+  font-family: bitcount-mono-single-square, sans-serif;
+  font-style: normal;
+}
+/* menu-bar css*/
 .menu-bar {
   position: sticky;
   top:0;
@@ -6,9 +11,7 @@
   flex-direction: row;
   justify-content: space-between;
   
-  font-family: bitcount-mono-single-square, sans-serif;
   font-weight: 300;
-  font-style: normal;
   font-size: 2.5em;
   
   padding-left: 10px;
@@ -33,35 +36,31 @@
   opacity: 40%
 }
 
+.links a:hover {
+  text-decoration: underline;
+  color: #E3F32A;
+  
+  opacity: 100%;
+}
+
 #title {
   text-decoration: none;
   color: black;
   
-  font-family: bitcount-mono-single-square, sans-serif;
   font-weight: 600;
-  font-style: normal;
 
-}
-
-.links a:hover {
-  text-decoration: underline;
-  color: #D4E141;
-  
-  opacity: 100%;
 }
 
 #active {
-  color: #D4E141;
+  color: #E3F32A;
   
   opacity: 100%;
 }
 
 
-
+/*homepage welcome text*/
 .welcome{
-  font-family: bitcount-mono-single-square, sans-serif;
   font-weight: 600;
-  font-style: normal;
   font-size: 10em; 
   line-height: 80%;
 
@@ -77,5 +76,119 @@
   
 
 }
+
+.names {
+  position:absolute;
+  width: 100%;
+  margin-top:10vh;
+  
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+}  
+.names-left, .names-right {
+  font-size: 2em;
+  
+}
+
+/*Class CSS - 4 left*/
+@keyframes flyInLeft {
+  0% {
+  transform: translateX(-300%);
+  }
+ 100% { 
+ transform: translateX(0%); 
+ }
+}
+.names-left * {
+  animation: flyInLeft 1s ease-in-out;
+  
+  width: fit-content;
+  position: relative;
+}
+.names-left > :nth-child(1) {
+  bottom:5vh;
+}
+.names-left > :nth-child(2) {
+  right: 10vw;
+  bottom:5vh;
+}
+
+.names-left > :nth-child(3) {
+  right: 25vw;
+  bottom:5vh;
+}
+
+.names-left > :nth-child(4) {
+  right: 15vw;
+  top: 5vh;
+}
+
+.names-left > :nth-child(5) {
+  top: 8vh;
+  right:25vw;
+}
+
+.names-left > :nth-child(6) {
+  top: 17vh;
+  right: 5vw
+}
+
+/*Class CSS - 4 right*/
+@keyframes flyInRight {
+ 0%   { 
+ transform: translateX(500%); 		
+ }
+ 100% { 
+ transform: translateX(0%); 
+ }
+}
+
+
+.names-right * {
+  animation: flyInRight 1s ease-in-out;
+  
+  width: fit-content;
+  position: relative;
+  
+}
+
+.names-right > :nth-child(2) {
+  left: 17vw;
+  bottom: 5vh;
+}
+
+.names-right > :nth-child(3) {
+  left: 20vw;
+  top:5vh;
+}
+
+.names-right > :nth-child(4) {
+  left: 15vw;
+  top: 5vh;
+}
+
+.names-right > :nth-child(5) {
+  top: 8vh;
+  left:25vw;
+}
+
+.names-right > :nth-child(6) {
+  top: 10vh;
+  right: 5vw
+}
+
+
+.names-right *:hover,.names-left *:hover {
+   color:#E3F32A;
+  
+}
+
+
+
+
+
+
+
 
 
