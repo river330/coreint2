@@ -1,6 +1,7 @@
 html {
   font-family: bitcount-mono-single-square, sans-serif;
   font-style: normal;
+  
 }
 /* menu-bar css*/
 .menu-bar {
@@ -16,6 +17,12 @@ html {
   
   padding-left: 10px;
   padding-right: 10px;
+}
+.names-right a, .names-left a {
+  color: black;
+  text-decoration:none;
+  
+  opacity: 100%;
 }
 
 .links {
@@ -70,7 +77,7 @@ html {
   justify-content: center;
   
   margin-top: 20vh;
-  width: 70%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
   
@@ -78,9 +85,10 @@ html {
 }
 
 .names {
-  position:absolute;
+  position:relative;
   width: 100%;
   margin-top:10vh;
+  left: 3em;
   
   display:flex;
   flex-direction: row;
@@ -88,6 +96,7 @@ html {
 }  
 .names-left, .names-right {
   font-size: 2em;
+  text-wrap: no-wrap;
   
 }
 
@@ -134,10 +143,14 @@ html {
   right: 5vw
 }
 
+.names-left > :nth-child(7) {
+  right: 10vw;
+}
+
 /*Class CSS - 4 right*/
 @keyframes flyInRight {
  0%   { 
- transform: translateX(500%); 		
+ transform: translateX(300%); 		
  }
  100% { 
  transform: translateX(0%); 
@@ -174,9 +187,17 @@ html {
 }
 
 .names-right > :nth-child(6) {
-  top: 10vh;
+  top: 13vh;
   right: 5vw
 }
+.names-right > :nth-child(7) {
+  left: 20vw;
+}
+
+.names-right > :nth-child(8) {
+  top: 3vh;
+}
+
 
 
 .names-right *:hover,.names-left *:hover {
@@ -184,7 +205,111 @@ html {
   
 }
 
+.title {
+  font-size: 15em;
+  font-weight: 600;
+  text-align: right;
+  
+  position: relative;
+  right: 2vw;
+  top: 40vh; 
+  
+  animation: flyInRight 1s ease-in-out;
+}
 
+
+/* .icons {
+  position: relative;
+  display: inline-block;
+      
+}
+
+.icons .img-top {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        
+        animation: none;
+    }
+    .icons:hover .img-top {
+        display: inline;
+        background-repeat: no-repeat;
+    }
+
+.icons img{
+  animation: flyInLeft 1s ease-in-out;
+}
+
+.projects > :nth-child(1) {
+  left: 13vw;
+  bottom:2vh;
+}
+
+.projects > :nth-child(2) {
+  left: 30vw;
+  bottom: 20vh;
+}
+
+.projects > :nth-child(3) {
+  left: vw;
+  bottom: 5vh;
+}
+
+.projects > :nth-child(4) {
+  left: 60vw;
+  bottom: 15vh;
+} */
+
+.projects {
+  display:flex;
+  flex-direction: column;
+  gap: 2vh;
+  width: fit-content;
+  
+  font-size: 2.2em;
+  
+  position:relative;
+  left: 10vw;
+  bottom: 13vh;
+  
+  animation: flyInLeft 1s ease-in-out;
+  
+
+}
+
+.projects a {
+  text-decoration: none;
+  color: black;
+  
+  opacity: 40%
+}
+
+.projects a:hover {
+/*   text-decoration: underline; */
+  color: #E3F32A;
+  
+  opacity: 100%;
+}
+
+.projects a:hover::after {
+	display: block;
+	content: attr(data-desc);
+  font-size: 0.75em;
+}
+
+/* .moving-menu {
+  position: sticky;
+  bottom: 0;
+  
+  width: 100vw;
+}
+
+.moving-menu img {
+ width: 100%;
+}
+ */
 
 
 
