@@ -1,0 +1,615 @@
+
+
+/*Animations*/
+@keyframes disappearText {
+ 0%   { 
+  opacity: 1;     
+ }
+ 100% { 
+  opacity: 0; 
+ }
+}
+
+@keyframes appearText {
+  0% {
+    opacity: 0;
+  }
+
+  100%{
+    opacity: 1;
+  }
+}
+
+@keyframes biggerText {
+  0% {
+    font-size:1em;
+  }
+  100% {
+    font-size: 2em;
+  }
+}
+
+@keyframes smallerText {
+  0% {
+    font-size:1em;
+  }
+  100% {
+    font-size:.5em;
+  }
+}
+
+@keyframes catchFire {
+  0% {
+    color: black;
+    text-shadow: none;
+  }
+  70% {
+    text-shadow: white;
+  }
+  100%{
+    color: red;
+    color: red;
+  text-shadow: 0px -2px 4px #fff, 0px -2px 10px #FF3, 0px -10px 20px #F90, 0px -20px 40px #C33;
+  }
+}
+
+@keyframes growText {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(1, 8);
+  }
+}
+
+@keyframes strike {
+  from { text-decoration-color: transparent; }
+  to { text-decoration-color: auto; }
+}
+
+@keyframes moveAround {
+  0% {
+  transform: translate(0%, 0%);
+  }
+ 20% { 
+ transform: translate(20%, 10%); 
+ }
+ 40% { 
+ transform: translate(20%, -20%); 
+ }
+ 60% { 
+ transform: translate(-10%, 90%); 
+ }
+ 80%{
+  transform: translate(-20%, -30%);
+ }
+}
+
+@keyframes changingGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+
+}
+
+@keyframes makeRed {
+  0%{
+    color:black;
+  }
+  30%{
+    color:black;
+  }
+  100%{
+    color:red;
+    font-size:1.3em;
+  }
+}
+
+@keyframes makeGreen {
+  0%{
+    color:black;
+  }
+  30%{
+    color:black;
+  }
+  100%{
+    color: green;
+  }
+}
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+
+@keyframes makeDistance {
+  100% {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+
+@keyframes makeCircle {
+  100% {
+    border: 3px solid rgba(0, 0, 0, 1.0);
+  }
+}
+
+@keyframes spin {
+  0% { content:"phrase"; }
+  20% { content:"line"; }
+  40% { content:"scrap of langauge"; }
+  60% { content:"rhythm"; }
+  80% { content:"image"; }
+}
+
+ @keyframes bounce {
+        0%   { transform: scale(1,1) translateY(0); }
+        10%  { transform: scale(1.1,.9) translateY(0); }
+        30%  { transform: scale(.9,1.1)   translateY(-20px);}
+        50%  { transform: scale(1.05,.95) translateY(0); }
+        58%  { transform: scale(1,1) translateY(-7px); }
+        65%  { transform: scale(1,1) translateY(0);}
+        100% { transform: scale(1,1) translateY(0);}
+    }
+
+.test.b.animation {
+  animation: bounce 1s ease infinite;
+}
+
+.test.o.animation {
+  animation: bounce 1s ease infinite .1s;
+}
+
+.test.u.animation {
+  animation: bounce 1s ease infinite .2s;
+}
+
+.test.n.animation {
+  animation: bounce 1s ease infinite .3s;
+}
+
+@keyframes breathing {
+  0% {
+    font-size: 1rem;
+  }
+  25% {
+    font-size: 1.08rem;
+  }
+  60% {
+    font-size: 1rem;
+  }
+  100% {
+    font-size: 1rem;
+  }
+}
+
+@keyframes biggerGap {
+  100% {
+    word-spacing: 0.3rem;
+  }
+}
+@keyframes strikethrough {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 1003295;
+  }
+}
+
+@keyframes growTextTwo {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  100% {
+    transform: scale(1.5, 1);
+  }
+}
+
+@keyframes rotateAnimation {
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes growingWord {
+  0% {
+    transform: scale(1, 0.01);
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes longO {
+  0% { content:""; }
+  15% { content:"o"; }
+  30% { content:"oo"; }
+  45% { content:"ooo"; }
+  60% { content:"oooo"; }
+  75% { content:"ooooo"; }
+  90% { content:"oooooo"; }
+  100%{ content:"ooooooo"; }
+}
+@keyframes acrossWhat {
+  0% { content:"";}
+  30% { content:"ages, "; }
+  60% { content:"ages, cultures, "; }
+  90% { content:"ages, cultures, aesthetic schools,"; }
+  100% { content:"ages, cultures, aesthetic schools,"; }
+}
+
+.test.across.animation:after{
+  content:"";
+  animation: acrossWhat 2.5s linear forwards;
+  animation-delay: 1s;
+}
+.test.long.animation:after{
+  content:"";
+  animation: longO 2s linear forwards;
+  animation-delay: 1s;
+}
+.test.bang.animation {
+animation:letter_explode 1s 1.6s forwards;
+}
+@keyframes letter_explode {
+    0% {letter-spacing:0.1em;opacity:1;}
+    100% {letter-spacing:1em;opacity:0;}
+}
+
+/*animation ques*/
+.test.bgt.animation {
+  animation: biggerText 3s ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: .4s;
+}
+.test.smt.animation {
+  animation: smallerText 3s ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: .4s;
+}
+
+.test.disappear.animation {
+  animation: disappearText 3s ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+
+
+.test.fire.animation {
+  animation: catchFire 2s;
+  animation-fill-mode: forwards;
+   animation-delay: 1s;
+} 
+
+.test.tree.animation {
+  animation: growText 5s ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+
+  display:inline-block;
+
+}
+
+.test.appear.animation {
+  animation: appearText 2s ease-in;
+  animation-fill-mode: forwards;
+  
+}
+
+.test.wdr.animation {
+  animation: moveAround 4s ease-in;
+  animation-iteration-count: infinite;
+   animation-delay: 1s;
+
+}
+
+.test.color.animation {
+  animation: changingGradient 3s ease;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+.test.red.animation {
+  animation: makeRed 3s ease;
+  animation-fill-mode: forwards;
+}
+
+
+.test.typing-demo.animation {
+  width: 16ch;
+  animation: typing 2s steps(22);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+ 
+}
+
+.test.distance.animation {
+  animation: makeDistance 4s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.test.circle.animation {
+  animation: makeCircle 3s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+
+}
+.test.spin.animation:after {
+  content:"phrase";
+  animation: spin 4s linear infinite;
+}
+
+.test.disappear.animation.one {
+  animation-delay: 0s;
+}
+.test.disappear.animation.two {
+  animation-delay: 0.3s;
+}
+.test.disappear.animation.three {
+  animation-delay: 0.6s;
+}
+.test.disappear.animation.four {
+  animation-delay: 0.9s;
+}
+.test.appear.animation.one {
+  animation-delay: 0s;
+}
+.test.appear.animation.two {
+  animation-delay: 0.2s;
+}
+.test.appear.animation.three {
+  animation-delay: 0.4s;
+}
+.test.appear.animation.four {
+  animation-delay: 0.6s;
+}
+
+.test.living.animation {
+  animation: breathing 2s ease infinite;
+}
+
+.test.gap.animation {
+  animation: biggerGap 2s ease;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+
+@property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.test.number.animation {
+  animation: counter 4s ease-in-out;
+  animation-fill-mode: forwards;
+  counter-reset: num var(--num);
+
+  display: inline;
+}
+.test.number.animation::after {
+  content: counter(num);
+}
+
+.test.strikethrough.animation {
+  display: inline-block;
+  position: relative;
+  transition: all 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+.test.strikethrough.animation:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+ /* box-shadow: 0 1px rgba(255,255,255,0.6);*/
+  margin-top: -0.7em;
+  background: black;
+  transform-origin: center left;
+  transform: scaleX(0);
+  animation: strikethrough 3s 0.5s cubic-bezier(.55, 0, .1, 1) 1;
+  animation-fill-mode: forwards;
+  transition: transform 0.5s cubic-bezier(.55, 0, .1, 1);
+}
+
+.test.rope.animation {
+  animation: growTextTwo 3s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+
+  display:inline-block;
+
+}
+
+div.tart.squared.animation {
+  animation: rotateAnimation 3s linear;
+  animation-iteration-count: 2;
+  /*animation-delay: 3s;*/
+}
+
+.test.green.animation {
+  animation: makeGreen 3s ease;
+  animation-fill-mode: forwards;
+}
+
+.test.grow.animation {
+  animation: growingWord 3s ease-in;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+  transform: scale(1, 0.01);
+
+  display:inline-block;
+}
+/*basic css*/
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar{
+  display: none;
+}
+
+html {
+font-family: garamond-premier-pro, serif;
+font-weight: 100;
+font-style: normal;
+font-size: 30px;
+
+max-width: 100%;
+overflow-x: hidden;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  font-size: 5em;
+  text-align: center;
+
+  justify-content: center;
+}
+.card-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  gap: 1rem;
+  width: 80vw;
+  margin: auto;
+
+
+}
+
+.card {
+  transition: 2s;
+  text-align: center;
+  margin-bottom: 10vh;
+  align-items: center;
+  opacity: 0;
+
+  width:  80%;
+}
+
+.card.show {
+  opacity: 1;
+}
+.test {
+  display: inline;
+}
+
+.test.color {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.wrapper {
+  /*This part is important for centering*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trial {
+  display: flex;
+  flex-direction: column;
+}
+.bg {
+  font-size: 3em;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+}
+ .center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+ }
+ .circle {
+  border-radius: 50%;
+  padding: 0.3rem;
+  background: #fff;
+  border: 3px solid rgba(0, 0, 0, 0);
+  color: #000;
+ }
+
+.inline {
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+  justify-content: center;
+}
+
+/*spacing*/
+.onevh {
+  margin-bottom: 10vh;
+}
+.twovh {
+  margin-bottom: 20vh;
+}
+.threevh {
+  margin-bottom: 30vh;
+}
+.fivevh {
+  margin-bottom: 50vh;
+}
+.sevenvh {
+  margin-bottom: 70vh;
+}
+.halfvh {
+  margin-bottom: 0.5vh;
+}
+.shorterline {
+  line-height: 40%;
+}
+.spacer {
+  height: 70vh;
+}
+
+.test.appear {
+  opacity: 0;
+}
+
+.bold{
+  font-weight: 900;
+}
+
+.smalltext {
+  font-size: 0.7rem;
+}
+
+/*.card-container * {
+  width: fit-content;
+  position: relative;
+
+  text-align: center;
+  
+}*/
+
