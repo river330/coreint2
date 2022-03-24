@@ -1,17 +1,6 @@
 /* If you're feeling fancy you can add interactivity 
     to your site with Javascript */
 
-let x = document.querySelector(".links_mobile");
-
-document.querySelector(".menu_button").onclick = function() {
-if (x.style.display === "none") {
-    x.style.display = "flex";
-  } else {
-    x.style.display = "none";
-  }
-}
-
-
 let button = document.querySelector(".unique");
 button.addEventListener("mouseover", function(){
   document.getElementById("one").style.opacity = "1";
@@ -30,14 +19,12 @@ button2.addEventListener("mouseout", function(){
   document.getElementById("two").style.opacity = "0";
 });
 
+let x = document.querySelector(".links_mobile");
 
-let button_2 = document.querySelector(".unique_2");
-button_2.addEventListener("mouseover", function(){
-  document.getElementById("one_2").style.opacity = "1";
-});
-
-button_2.addEventListener("mouseout", function(){
-  document.getElementById("one_2").style.opacity = "0";
-});
-
-
+document.querySelector(".menu_button").onclick = function() {
+if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}

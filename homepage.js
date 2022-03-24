@@ -18,7 +18,7 @@
 let i = 0;
 
 let txt = prompt("Hi friend <3", "please enter your name here");
-let line = "Hi " + txt + "! " + "Welcome to Rand's page.";
+let line = "Hi " + txt + "! Welcome to Rand's page.";
 let speed = 100;
 
 
@@ -51,6 +51,15 @@ function typeWriter() {
 
 window.onload = typeWriter();
 
+let x = document.querySelector(".links_mobile");
+
+document.querySelector(".menu_button").onclick = function() {
+if (x.style.display === "none") {
+    x.style.display = "flex";
+  } else {
+    x.style.display = "none";
+  }
+}
 
 
 
