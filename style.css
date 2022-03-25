@@ -391,6 +391,8 @@ html {
     padding-left: 0px;
   padding-right: 0px;
     width:95vw;
+    background-color:white;
+    z-index:5;
   }
   .links {
     display:none;
@@ -417,8 +419,12 @@ html {
     padding-top:20px;
     padding-bottom:20px;
     
-    color:#E3F32A;
+    color:black;
     text-decoration:none;
+  }
+  
+  .links_mobile *:active {
+    background-color:#E3F32A;
   }
   
   .bio{

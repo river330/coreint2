@@ -28,3 +28,14 @@ if (x.style.display === "none") {
     x.style.display = "none";
   }
 }
+
+const smallDevice = window.matchMedia("(min-width: 800px)");
+
+smallDevice.addListener(handleDeviceChange);
+
+function handleDeviceChange(e) {
+  if (e.matches) x.style.display = "none";
+}
+
+// Run it initially
+handleDeviceChange(smallDevice);
