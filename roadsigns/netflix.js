@@ -113,5 +113,5 @@ function typeWriter() {
 $(window).on("load", typeWriter());
 
 $.when(typeWriter()).done(function() {
-      $(".loader-wrapper").delay(3000).fadeOut(800, "linear");
+      $(".loader-wrapper").delay(2550).fadeOut(800, "linear");
 });
