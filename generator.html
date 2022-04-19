@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
+
+    <title>Hello world!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="generator.css" />
+
+    <!-- import the webpage's javascript file -->
+<!--     <script src="/script.js" defer></script> -->
+  </head>
+  <body>
+    <div class="nav">
+      <a href="/index.html" id="nav">roadsign americana</a>
+    </div>
+    <div id="menu">
+      <label for="type">Type</label>
+      <textarea id="type">Roadsigns</textarea>
+      
+      <label for="typesize">Type Size</label>
+      <input id="typesize" class="test" type="range" value="150" min="50" max="250" >
+      <label for="leading">Leading</label>
+      <input id="leading" type="range" value="150" min="0" max="400" step="10">
+      
+<!--       <label>Background</label> -->
+      <input id="background" type="color" value="#FFFFFF">
+      
+<!--       <label>Color</label> -->
+      <input id="fontcolor" type="color" value="#002AFF">
+      
+<!--       <label>Stroke</label> -->
+<!--       <input id="strokecolor" type="color" value=""> -->
+      <label>Lettercase</label>
+      <select id="lettercase">
+        <option value="regular">Default</option>
+        <option value="lowercase">lowercase</option>
+        <option value="uppercase">UPPERCASE</option>
+      </select>
+      
+      <button id="save-image" class="button">save jpg</button>
+    </div>
+    <script src="sketch.js" defer></script>
+  </body>
+</html>

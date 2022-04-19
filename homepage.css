@@ -1,0 +1,158 @@
+:root {
+    --my-variable: red;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", sans-serif;
+}
+
+.title { 
+  width:80vw;
+  
+  
+/*    padding-bottom: 10vh; */
+ 
+}
+
+.brand {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+ 
+}
+
+.nav {
+  font-size: 1.5em;
+  width: fit-content;
+  
+  position: absolute;
+  right:1.5vw;
+  top:3vh;
+  
+  
+}
+
+
+
+.gen {
+  color: black;
+  opacity: 50%;
+  text-decoration: none;
+}
+
+.gen:hover {
+  color: black;
+  opacity:100%;
+  text-decoration: none;
+}
+
+h2{
+  font-size:40px; 
+}
+
+
+.labels {
+  position: absolute;
+  left:32vw;
+  bottom:15vh;
+  
+  font-size:1.5em;
+  
+  display: flex;
+  flex-direction:row;
+  justify-content:space-between;
+  width: 38vw;
+  
+}
+
+.active {
+  width: 50px;
+  background-color: green;
+}
+
+.navdec {
+  color: black;
+}
+
+
+
+.cover-image{
+   height: auto;
+  max-width: 100%;
+}
+
+
+#americana {
+  width: 30vw;
+  position: absolute;
+  
+  bottom:20vh;
+  left:35vw;
+  
+  background-color: transparent;
+  
+  /* Removes some defaults */
+  -webkit-appearance: none;
+}
+
+
+/* This is the "track" that the slider sits on  */
+#americana::-webkit-slider-runnable-track {
+  background: white;
+  outline: 2px solid black;
+
+  -webkit-appearance: none;
+  border-radius: 100px;
+  
+  /* Turns the cursor into the hand pointer icon when hovering over the slider  */
+/*   cursor: pointer; */
+  
+}
+
+
+/* This is the moveable bit of the slider, known as the "thumb"*/
+#americana::-webkit-slider-thumb {
+  width: 20px;
+  height: 20px;
+  background: black;
+/*   cursor: pointer; */
+  -webkit-appearance: none;
+  
+  /* negative top padding moves it up */
+/*  margin-top:-1px; */
+
+  
+  /* Border radius gives rounded corners, if they're big enough, you end up with circles */
+  border-radius: 20px;
+  
+}
+#americana::-webkit-slider-thumb:hover {
+  background: var(--my-variable);
+}
+.loader-wrapper{
+  width:100%;
+  height:100%;
+  position:absolute;
+  z-index:5;
+  left:0;
+  top:0;
+  background:white;
+  
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items:center;
+}
+
+#output{
+  /* The command I know best. */
+  text-transform:uppercase;
+  font-size:5em;
+  font-weight:bold;
+  text-align:center;
+
+}

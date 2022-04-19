@@ -1,0 +1,134 @@
+:root {
+    --my-variable: red;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica", sans-serif;
+}
+
+canvas {
+  position: absolute;
+  font-family: "Helvetica", sans-serif;
+
+}
+
+.nav {
+  font-size: 1.5em;
+  width: fit-content;
+  
+  position: absolute;
+  right:2vw;
+  top:3vh;
+  
+  z-index:5;
+  
+}
+
+a {
+  color: black;
+  opacity: 30%;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  opacity:100%;
+  text-decoration: none;
+}
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  
+  z-index:5;
+  position:absolute;
+  
+  left: 2vw;
+  top: 3.5vh;
+  
+
+
+}
+
+label {
+ margin-bottom: 5px;
+
+}
+
+input, textarea, select {
+  margin-bottom: 10px;
+}
+
+#save-image {
+  width: 110px;
+}
+
+input {
+  
+  background-color: transparent;
+  
+  /* Removes some defaults */
+  -webkit-appearance: none;
+}
+
+
+/* This is the "track" that the slider sits on  */
+input::-webkit-slider-runnable-track {
+  background: white;
+  outline: 2px solid black;
+  
+  height: 15px;
+
+  -webkit-appearance: none;
+  border-radius: 100px;
+  
+  /* Turns the cursor into the hand pointer icon when hovering over the slider  */
+/*   cursor: pointer; */
+  
+}
+
+
+/* This is the moveable bit of the slider, known as the "thumb"*/
+input::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  background: var(--my-variable);
+/*   cursor: pointer; */
+  -webkit-appearance: none;
+  
+  /* negative top padding moves it up */
+/*  margin-top:-1px; */
+
+  
+  /* Border radius gives rounded corners, if they're big enough, you end up with circles */
+  border-radius: 20px;
+  
+}
+input::-webkit-slider-thumb:hover {
+  background: var(--my-variable);
+}
+
+#background {
+  margin-top:10px;
+}
+button {
+  height: 2em; 
+  background: white;
+  border-radius: 20px;
+  
+  border: 2px solid black;
+}
+
+button:hover {
+  color: var(--my-variable);
+  cursor: "pointer";
+}
+
+.testing {
+  font-family: "Futura"
+}
+
+
