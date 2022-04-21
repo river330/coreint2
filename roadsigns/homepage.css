@@ -1,3 +1,16 @@
+@font-face {
+  font-family: 'Roadsign-Regular';
+  src: url('https://cdn.glitch.global/36d37aff-b9be-4a04-8b60-b06c47c86ae9/Roadsign-Regular.eot?v=1650395803418');
+  src: url('assets/Roadsign-Regular.eot?#iefix') format('embedded-opentype'),
+       url('https://cdn.glitch.global/36d37aff-b9be-4a04-8b60-b06c47c86ae9/Roadsign-Regular.svg?v=1650395803418') format('svg'),
+       url('https://cdn.glitch.global/36d37aff-b9be-4a04-8b60-b06c47c86ae9/Roadsign-Regular.ttf?v=1650395803489') format('truetype'),
+       url('https://cdn.glitch.global/36d37aff-b9be-4a04-8b60-b06c47c86ae9/Roadsign-Regular.woff?v=1650395803452') format('woff'),
+       url('https://cdn.glitch.global/36d37aff-b9be-4a04-8b60-b06c47c86ae9/Roadsign-Regular.woff2?v=1650395803471') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 :root {
     --my-variable: red;
 }
@@ -155,4 +168,36 @@ h2{
   font-weight:bold;
   text-align:center;
 
+}
+
+.popup {
+  position:absolute;
+  left: 45.5%;
+  top:20%;
+  
+  background: white;
+  
+  text-align:center;
+  
+  padding: 5px;
+  border-radius:5px;
+  
+  display: none;
+  animation: float 3s ease-in-out infinite;
+  outline: 2px solid black;
+}
+
+@keyframes float {
+	0% {
+
+		transform: translatey(0px);
+	}
+	50% {
+
+		transform: translatey(-15px);
+	}
+	100% {
+
+		transform: translatey(0px);
+	}
 }

@@ -1,11 +1,28 @@
-var junction_font = new FontFace('Roadsign', 'url(https://cdn.glitch.global/25bf5b7b-fb4b-45fa-9cdc-b297517d3008/Roadsign-Regular.otf?v=1650338100388)');
 
-junction_font.load().then(function(loaded_face) {
-	// loaded_face holds the loaded FontFace
-}).catch(function(error) {
-	// error occurred
-});
 
+
+// let roadsign;
+// function preload() {
+//   roadsign = loadFont('https://cdn.glitch.global/36d37aff-b9be-4a04-8b60-b06c47c86ae9/Roadsign-Regular.ttf?v=1650395803489');
+// }
+
+let rbackground = [
+ '#FFFFFF',
+  '#06B1EF',
+  '#000000',
+  '#FF5EDF',
+  '#0BF5D3',
+  '#F352FF',
+]; 
+
+let tbackground = [
+  '#A720F3',
+  '#FFEA00',
+  '#A4E840',
+  '#E60A0A',
+  '#0BF5D3',
+  '#1459FD',
+]; 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -21,6 +38,7 @@ function setup() {
   colorPicker = select("#background");
   colorPicker.style("height", "60px");
   colorPicker.style("width", "60px");
+  colorPicker.value(random(rbackground));
 
   //   colorPicker = select("#background");
   //   colorPicker.position(30, 140);
@@ -28,6 +46,7 @@ function setup() {
   colorPicker2 = select("#fontcolor");
   colorPicker2.style("height", "60px");
   colorPicker2.style("width", "60px");
+  colorPicker2.value(random(tbackground));
   //   colorPicker2.position(30, 200);
 
   //   colorPicker3 = select("#strokecolor");
@@ -68,9 +87,10 @@ function draw() {
   let word = myTextArea.value();
 
   
-  textFont("roadsign")
+  textFont('Roadsign-Regular')
   if (value === "uppercase") {
     let words = text(word.toUpperCase(), windowWidth / 2, windowHeight / 2);
+    
   }
   if (value === "lowercase") {
     let words = text(word.toLowerCase(), windowWidth / 2, windowHeight / 2);

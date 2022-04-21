@@ -53,6 +53,7 @@ slider.oninput = function(e) {
   showBrands(e.target);
   
 }
+  let popup = document.querySelector(".popup");
 
 function showBrands(e){
   console.log("showSeasons()"); 
@@ -66,10 +67,13 @@ function showBrands(e){
        window.location = "index.html";
     
     });
-    output.style.cursor = "pointer"
+    output.style.cursor = "pointer";
+    popup.style.display = "inherit";
   } else {
     output.style.filter = "none"
     document.body.style.backgroundColor = "white";
+        popup.style.display = "none"
+
   }
   
 }

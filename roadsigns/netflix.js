@@ -1,11 +1,11 @@
 
-var junction_font = new FontFace('Roadsign', 'url(assets/Roadsign-Regular.otf)');
+// var junction_font = new FontFace('Roadsign', 'url(assets/Roadsign-Regular.otf)');
 
-junction_font.load().then(function(loaded_face) {
-	// loaded_face holds the loaded FontFace
-}).catch(function(error) {
-	// error occurred
-});
+// junction_font.load().then(function(loaded_face) {
+// 	// loaded_face holds the loaded FontFace
+// }).catch(function(error) {
+// 	// error occurred
+// });
 
 /* If you're feeling fancy you can add interactivity 
     to your site with Javascript */
@@ -63,6 +63,11 @@ slider.oninput = function(e) {
   
 }
 
+  let popup = document.querySelector(".popup");
+  // let testing = document.querySelector(".testing")
+  
+
+
 function showBrands(e){
   console.log("showSeasons()"); 
   
@@ -73,10 +78,14 @@ function showBrands(e){
     output.addEventListener("click", function(){
        window.location = "spotify.html";
     });
-    output.style.cursor = "pointer"
+    output.style.cursor = "pointer";
+    popup.style.display = "inherit";
+    // testing.classList.add("test")
+    
   } else {
     output.style.filter = "none"
     document.body.style.backgroundColor = "white";
+    popup.style.display = "none"
   }
   
 }
@@ -93,14 +102,14 @@ function showBrandsStart(){
 let x = 0;;
 let line = "Roadsign Americana";
 let speed = 0;
-let color = ["red", "orange", "green", "blue", "pink", "purple", "teal", "#41E5DA", "#E5415F" ]
+let color = ["red", "pink", "green", "blue", "orange", "purple", "teal", "#41E5DA", "#E5415F" ]
 
 function typeWriter() {
   setTimeout(function(){
   for (let i = 0; i < 10; i++){
     setTimeout(function(){
     let test = document.getElementsByClassName('test')[i];
-    test.style.fontFamily = "Roadsign"
+    test.style.fontFamily = "'Roadsign-Regular'"
     test.style.color = color[i]
     }, i * 200)
   }
@@ -113,5 +122,5 @@ function typeWriter() {
 $(window).on("load", typeWriter());
 
 $.when(typeWriter()).done(function() {
-      $(".loader-wrapper").delay(2550).fadeOut(800, "linear");
+      $(".loader-wrapper").delay(3000).fadeOut(800, "linear");
 });
