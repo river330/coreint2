@@ -21,7 +21,10 @@ html, body {
   
 *::-webkit-scrollbar{
     display: none;
+    -webkit-appearance: none;
   }
+
+  
 
 .scroll {
 
@@ -53,3 +56,8 @@ html, body {
 .test {
     background-color: orange;
 }
+
+.on {
+    color: white;
+}
+

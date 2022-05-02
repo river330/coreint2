@@ -58,10 +58,16 @@ function showSeasons(){
 
     h2.addEventListener("click", function(event){
     audio.play();
+    h2.classList.add("on");
+    $(".card:not(.on)").css("opacity", "0.4");
+    setTimeout(function(){
+      h2.classList.remove("on");
+      h2.style.opacity ="1"
+      h2.style.transition="all 0.3s"
+      $(".card").css("opacity", "1");
+    }, 4000)
   });
 });
-
-
 
   observeCards();
   // onLoad();
