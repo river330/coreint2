@@ -57,16 +57,21 @@ function showSeasons(){
     audio.classList.add("audial")
 
     h2.addEventListener("click", function(event){
-    audio.play();
-    h2.classList.add("on");
-    $(".card:not(.on)").css("opacity", "0.4");
-    setTimeout(function(){
-      h2.classList.remove("on");
-      h2.style.opacity ="1"
-      h2.style.transition="all 0.3s"
-      $(".card").css("opacity", "1");
-    }, 4000)
-  });
+      if (!$(cardContainer).hasClass("stop")){
+        cardContainer.classList.add("stop");
+
+        audio.play();
+        h2.classList.add("on");
+        $(".card:not(.on)").css("opacity", "0.4");
+        setTimeout(function(){
+          cardContainer.classList.remove("stop");
+          h2.classList.remove("on");
+          h2.style.opacity ="1";
+          h2.style.transition="all 0.3s";
+          $(".card").css("opacity", "1");
+        }, 4000)
+      }
+    });
 });
 
   observeCards();
@@ -99,18 +104,32 @@ lastCardObserver.observe(document.querySelector(".card:last-child"))
 
 }
 
-const cardContainer = document.querySelector(".scroll");
+let cardContainer = document.querySelector(".scroll");
 
 function onLoad(){
   const cards = document.querySelectorAll(".card");
   console.log("onLoad completed")
     cards.forEach(card => {
     	const clone = card.cloneNode(true);
+        clone.classList.add("clone");
     		// observer.observe(clone);
     		cardContainer.appendChild(clone); 
         clone.addEventListener("click", function(event){
-          let audio = clone.querySelector(".audial");
-          audio.play();
+          if (!$(cardContainer).hasClass("stop")){
+            let audio = clone.querySelector(".audial");
+            cardContainer.classList.add("stop");
+
+            audio.play();
+            clone.classList.add("on");
+            $(".card:not(.on)").css("opacity", "0.4");
+            setTimeout(function(){
+              cardContainer.classList.remove("stop");
+              clone.classList.remove("on");
+              clone.style.opacity ="1"
+              clone.style.transition="all 0.3s"
+              $(".card").css("opacity", "1");
+            }, 4000)
+          }
     });
 });
 }
