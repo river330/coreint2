@@ -97,7 +97,10 @@ const lastCardObserver = new IntersectionObserver(entries => {
 	onLoad();
 	lastCardObserver.unobserve(lastCard.target);
 	lastCardObserver.observe(document.querySelector(".card:last-child"));
-}, {})
+}, {
+
+	rootMargin: "100px"
+})
 
 function observeCards(){
 lastCardObserver.observe(document.querySelector(".card:last-child"))
