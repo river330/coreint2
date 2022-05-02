@@ -48,8 +48,20 @@ function showSeasons(){
     h2.innerText = season.fields.Season; 
     parent.appendChild(h2);   
     h2.classList.add("card");
-  
-  })
+
+    h2.style.backgroundColor = season.fields.Color;
+    
+    let audio = document.createElement("audio");
+    h2.appendChild(audio);
+    audio.src = season.fields.Sound[0].url;
+    audio.classList.add("audial")
+
+    h2.addEventListener("click", function(event){
+    audio.play();
+  });
+});
+
+
 
   observeCards();
   // onLoad();
@@ -90,8 +102,13 @@ function onLoad(){
     	const clone = card.cloneNode(true);
     		// observer.observe(clone);
     		cardContainer.appendChild(clone); 
+        clone.addEventListener("click", function(event){
+          let audio = clone.querySelector(".audial");
+          audio.play();
     });
+});
 }
+
 
 
 
