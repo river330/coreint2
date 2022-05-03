@@ -80,20 +80,27 @@ div .on {
     position: fixed;
     top: 0;
 
-    padding-left: 5%;
+
     padding-top: 3.5%;
 
-    width: 100vw;
-    height: 100vh;
+   
 
-    background-color: rgba(0, 0, 0, 0.5);
 
     display: none;
+
+
+
 }
 
 li {
     list-style: none;
     font-size: 2em;
+    padding-right: 10vw;
+    padding-bottom: 1vh;
+    padding-top: 1vh;
+    padding-left: 2vw;
+
+    background-color: rgba(0, 0, 0, 1);
 }
 
 a {
@@ -102,7 +109,14 @@ a {
 }
 
 .turnOn {
-    display: inherit;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+li:hover {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .menu {
@@ -112,4 +126,6 @@ a {
     right: 3.5%;
 
 }
+
+
 
