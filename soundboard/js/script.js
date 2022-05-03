@@ -5,7 +5,7 @@ var base = new Airtable({ apiKey: "keyv95oI4fnSU3EgP" }).base(
   "apprYjkG6aBXj2WbE"
 );
 
-base("Main").select({view: "grid"}).eachPage(gotPageOfSeasons, gotAllSeasons);
+base("Main").select({view: "main"}).eachPage(gotPageOfSeasons, gotAllSeasons);
 
 const seasons = [];
 
@@ -45,7 +45,7 @@ function showSeasons(){
   let parent = document.querySelector(".scroll")
   seasons.forEach((season)=> {
     const h2 = document.createElement("div");
-    h2.innerText = season.fields.Season; 
+    h2.innerText = season.fields.Name; 
     parent.appendChild(h2);   
     h2.classList.add("card");
 
@@ -108,10 +108,14 @@ lastCardObserver.observe(document.querySelector(".card:last-child"))
 }
 
 let cardContainer = document.querySelector(".scroll");
+let sticky = document.querySelector(".menu")
 
 function onLoad(){
   const cards = document.querySelectorAll(".card");
-  console.log("onLoad completed")
+  console.log("onLoad completed");
+  // sticky.style.top = "0";
+  // sticky.style.zIndex = "99";
+  // sticky.style.postion = "sticky";
     cards.forEach(card => {
     	const clone = card.cloneNode(true);
         clone.classList.add("clone");
@@ -136,6 +140,15 @@ function onLoad(){
     });
 });
 }
+
+let menu = document.querySelector(".menu");
+
+menu.addEventListener("click", function(){
+  let links = document.querySelector(".links")
+
+  links.classList.toggle("turnOn")
+})
+
 
 
 
