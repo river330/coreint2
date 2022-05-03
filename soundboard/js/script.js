@@ -108,17 +108,13 @@ lastCardObserver.observe(document.querySelector(".card:last-child"))
 }
 
 let cardContainer = document.querySelector(".scroll");
-let sticky = document.querySelector(".menu")
 
 function onLoad(){
   const cards = document.querySelectorAll(".card");
-  console.log("onLoad completed");
-  // sticky.style.top = "0";
-  // sticky.style.zIndex = "99";
-  // sticky.style.postion = "sticky";
+  console.log("onLoad completed")
     cards.forEach(card => {
     	const clone = card.cloneNode(true);
-        clone.classList.add("clone");
+        clone.classList.add("card");
     		// observer.observe(clone);
     		cardContainer.appendChild(clone); 
         clone.addEventListener("click", function(event){
@@ -148,6 +144,7 @@ menu.addEventListener("click", function(){
 
   links.classList.toggle("turnOn")
 })
+
 
 
 
