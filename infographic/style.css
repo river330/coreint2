@@ -1,0 +1,218 @@
+@font-face {
+  font-family: 'pp_mondwestregular';
+  src: url('assets/ppmondwest-regular-webfont.woff2') format('woff2'),
+       url('assets/ppmondwest-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+html, body {
+  font-family: 'pp_mondwestregular';
+  max-width: 100vw;
+  height: 100vh;
+  margin: auto;
+  padding:0;
+  /* overflow: hidden; */
+
+  background-image: url("assets/cloud.jpeg");
+  background-size: cover;
+  background-attachment: fixed;
+
+
+
+
+
+}
+* {
+  scrollbar-width: none;
+}
+
+*::-webkit-scrollbar{
+  display: none;
+  -webkit-appearance: none;
+}
+
+
+
+.scroll {
+
+ 
+  scrollbar-width: none;  /* Firefox */
+  font-family:'pp_mondwestregular';
+
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+
+
+  height: 100vh;
+  text-align: center;
+
+  /* display: none; */
+  position: absolute;
+
+
+ 
+
+
+
+}
+
+.card {
+  height:100%;
+  width:100vw;
+
+  color: black;
+  font-size: 3.4em;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes bounce-1 {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(20px); }
+  100% { transform: translateY(0); }
+}
+
+.bounce {
+  animation: bounce-1 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.bottom-message {
+  position: fixed;
+  width: 100vw;
+  top: 0vh;
+  left: 0px;
+  height:7.5vh;
+  background-color:white;
+  outline: black solid 5px;
+  
+}
+
+.bio {
+  color:black;
+  z-index:5;
+  
+  width:max-content;
+  
+  font-size: 3em;
+  position: fixed;
+  top: 4px;
+  
+  animation: moveText 20s linear;
+  
+  animation-iteration-count: infinite;
+}
+
+@keyframes moveText {
+  100%{
+    transform: translateX(-40%);
+  }
+  }
+
+
+.rankings {
+  display: flex;
+  flex-direction: column;
+  z-index: 99;
+
+  background-color: black;
+  outline: black solid 5px;
+
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+ 
+
+  font-size: 1.2em;
+
+  gap: 5px;
+
+  display:none;
+}
+
+
+.rankings * {
+  padding: 10px;
+  width: 300px;
+}
+
+.wins {
+  background-color: lightblue;
+}
+
+.highs {
+  background-color: lightgreen;
+
+}
+
+.safes {
+  background-color: palegoldenrod;
+
+}
+
+.lows {
+  background-color: orange;
+}
+
+.bottoms {
+  background-color: red;
+}
+
+.rankingOpen {
+  display: inherit;
+}
+
+.names {
+  font-family: bitcount-mono-single-square, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+  line-height: 90%;
+
+  z-index: 99;
+  opacity: 0;
+  font-size: 2.5em;
+
+  color:white;
+  -webkit-text-stroke: 3px black;
+}
+
+.hold {
+  display: flex;
+  flex-direction: row;
+  
+}
+
+.titles {
+  background-color: black;
+  color: white;
+
+  font-size: 0.5em;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  padding: 0px;
+}
+
+.titles * {
+  padding: 0px;
+  width: fit-content;
+}
+
