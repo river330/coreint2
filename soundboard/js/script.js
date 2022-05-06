@@ -140,12 +140,30 @@ function onLoad(){
 let menu = document.querySelector(".menu");
 
 menu.addEventListener("click", function(){
-  let links = document.querySelector(".links")
+  let links2 = document.querySelectorAll(".testing");
 
-  links.classList.toggle("turnOn")
-})
+  links2.forEach(function(link){ 
+    link.classList.toggle("moveIn")
+    }
+   );
+});
 
+// let links2 = document.querySelectorAll(".testing");
 
+// $(menu).toggle(
+//   function(){
+
+//     links2.forEach(link =>
+//     link.classList.add("moveIn"))
+//     link.classList.remove("moveOut");
+//   },
+//   function(){
+//     links2.forEach(link =>
+//     link.classList.remove("moveIn"))
+//     link.classList.add("moveOut");
+//   }
+
+// )
 
 
 
