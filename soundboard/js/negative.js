@@ -140,12 +140,13 @@ function onLoad(){
 let menu = document.querySelector(".menu");
 
 menu.addEventListener("click", function(){
-  let links = document.querySelector(".links")
+  let links2 = document.querySelectorAll(".testing");
 
-  links.classList.toggle("turnOn")
-})
-
-
+  links2.forEach(function(link){ 
+    link.classList.toggle("moveIn")
+    }
+   );
+});
 
 
 
