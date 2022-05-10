@@ -58,8 +58,7 @@ function showSeasons(){
     img.classList.add("images")
     card.appendChild(img);   
 
-    img.style.width = "35vw";
-    img.style.position = "absolute";
+
     
   const rankings = document.createElement("div");
   rankings.classList.add("rankings");
