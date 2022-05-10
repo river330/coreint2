@@ -5,7 +5,7 @@ var base = new Airtable({ apiKey: "keyv95oI4fnSU3EgP" }).base(
   "apprYjkG6aBXj2WbE"
 );
 
-base("Main").select({view: "arianka"}).eachPage(gotPageOfSeasons, gotAllSeasons);
+base("Main").select({view: "queen"}).eachPage(gotPageOfSeasons, gotAllSeasons);
 
 
 

@@ -83,13 +83,13 @@ div .on {
 
     padding-top: 3.5%;
 
-    left: -400px;
+    /* left: -400px; */
 
     display: flex;
     flex-direction: column;
     gap: 10px;
    
-
+    
 
 
 
@@ -103,7 +103,9 @@ li {
     padding-top: 1vh;
     padding-left: 2vw;
 
+    text-overflow: clip;
     background-color: rgba(0, 0, 0, 1);
+
 
 }
 
@@ -121,8 +123,16 @@ a:active {
     animation-delay: 0.2s;
  }
  .testing:nth-child(3) {
+    animation-delay: 0.3s;
+ }
+ .testing:nth-child(4) {
     animation-delay: 0.4s;
  }
+ .testing:nth-child(5) {
+    animation-delay: 0.5s;
+ }
+ 
+ 
 
 .moveOut {
     animation: moveOut 0.5s ease-in;

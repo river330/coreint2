@@ -1,11 +1,4 @@
-console.log("Hello, world!");
 
-var Airtable = require("airtable");
-var base = new Airtable({ apiKey: "keyv95oI4fnSU3EgP" }).base(
-  "apprYjkG6aBXj2WbE"
-);
-
-base("Main").select({view: "main"}).eachPage(gotPageOfSeasons, gotAllSeasons);
 
 const seasons = [];
 
@@ -139,14 +132,21 @@ function onLoad(){
 
 let menu = document.querySelector(".menu");
 
-menu.addEventListener("click", function(){
-  let links2 = document.querySelectorAll(".testing");
+// menu.addEventListener("click", function(){
+//   let links2 = document.querySelectorAll(".testing");
 
-  links2.forEach(function(link){ 
-    link.classList.toggle("moveIn")
-    }
-   );
-});
+//   links2.forEach(function(link){ 
+//     link.classList.toggle("moveIn")
+//     }
+//    );
+// });
+$('.links').hide()
+
+$('.menu').click(function() {
+  $('.links').animate({
+    width:"toggle"
+  });
+})
 
 // let links2 = document.querySelectorAll(".testing");
 
@@ -164,6 +164,7 @@ menu.addEventListener("click", function(){
 //   }
 
 // )
+
 
 
 
