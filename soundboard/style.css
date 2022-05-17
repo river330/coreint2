@@ -167,4 +167,7 @@ a:active {
 }
 
 
-
+li:active {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
